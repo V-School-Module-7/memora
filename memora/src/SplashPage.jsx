@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactDOM } from "react";
-import Form from "./Form";
+import Form from "./components/Form";
 
 export default function SplashPage(){
 
