@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.experiences{
+    width: 100vw;
+height: 46.0625rem;
+flex-shrink: 0;
+background: #26373D;
+display: flex;
+position:relative;
+justify-content: space-around;
+padding-top: 4.5rem;
+/* top:50%;
+left:50%;
+transform: translate(-50%, -50%); */
+}
+
+.textContainer{
+    width: 40vw
+}
+
+.experiencesTitle{
+    width: 34.125rem;
+    color: #DAE3E5;
+font-family: "Voga";
+font-size: 6rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.experiencesText{
+    width: 29.8125rem;
+height: 6.5rem;
+flex-shrink: 0;
+color: #DAE3E5;
+font-family: 'Abel';
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.getInTouch{
+    display: inline-flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+background: #FFF;
+border:none;
+margin-right: 1rem;
+}
+
+.learnMore{
+    display: inline-flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+background: #5E6C5A;
+border:none
+}
+
+.experiencesImage{
+    width: 34.125rem;
+height: 37.25rem;
+flex-shrink: 0;
+border-radius: 0.25rem;
+}

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+.mission{
+    width: 100vw;
+    height: 52.0625rem;
+    flex-shrink: 0;
+    background: #26373C;
+}
+
+.missionText {
+    display: flex;
+padding: 1rem;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+gap: 0.5rem;
+position: relative;
+top: 50%;
+left: 45%;
+transform: translate(-50%, -50%);
+width: 66vw;
+}
+
+.missionText > h1 {
+    color: #DAE3E5;
+    font-family: 'Voga';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem; /* 33.333% */
+    display: flex;
+padding: 1rem;
+align-items: center;
+gap: 0.5rem;
+}
+
+.missionText > h2 {
+    color: #DAE3E5;
+
+    font-family: 'Abel';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 100% */
+    display: flex;
+padding: 1rem;
+align-items: center;
+gap: 0.5rem;
+}
