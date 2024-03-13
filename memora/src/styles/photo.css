@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.photoContainer{
+    height: 45vw;
+    border: solid 1px red
+}
+
+.photo{
+    border-radius: 100%;
+    height:40vw;
+    width: 40vw;
+background: #26373C;
+box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.50);
+display: flex; /* Use flexbox */
+  justify-content: center; 
+  align-items:flex-end;
+  position: relative;
+  left:53%;
+  transform: translateY(-20%);
+}
+
+.mary {
+    height:50vw;
+}
+
+.memorable{
+    color: #DAE3E5;
+text-align: center;
+text-shadow: 0px 8px 16px rgba(0, 0, 0, 0.50);
+font-family: 'Voga';
+font-size: 4rem;
+font-style: normal;
+font-weight: 500;
+line-height: 4rem; /* 100% */
+position: relative;
+max-width:60vw;
+top: 33%;
+left:35%;
+transform:translate(-50%, -50%);
+border: solid 1px red;
+z-index: 1;
+}

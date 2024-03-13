@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.header{
+    height: 90vh
+}
+
+
+.memoraLogo{
+    width: 70vw;
+    height: auto;
+    flex-shrink: 0;
+    position: absolute;
+    top: 45%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    background: rgba(218, 227, 229, 0.005);
+    backdrop-filter: blur(5px);
+
+}
+
+.navbar{
+    width:100vw;
+    display: inline-flex;
+padding: 0rem 5.3125rem 0rem 4.8125rem;
+align-items: center;
+justify-content: space-between;
+gap: 58.86775rem;
+background: rgba(218, 227, 229, 0.10);
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+backdrop-filter: blur(50px);
+position:relative;
+top:100%;
+transform: translateY(-100%);
+color: #F5F5F5;
+font-family: "Abel";
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* Landing */
+
