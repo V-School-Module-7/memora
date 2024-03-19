@@ -1,15 +1,18 @@
 import React from "react";
 import { ReactDOM, useState } from "react";
 import emailjs from "@emailjs/browser";
+import "../styles/contact.css"
 
 export default function Form(){
 
 
     const initInputs = {
         name : "",
-        email : "",
-        tel : "",
+        street : "",
         location : "",
+        zip : "",
+        tel : "",
+        email : "",
         details : ""
       }
   
@@ -69,8 +72,47 @@ function sendEmail(e){
             name = "name"
             value = {inputs.name}
             id = "name"
-            placeholder = "John Doe"
+            className="input"
+            placeholder = "Full Name"
             required = {true}
+            onChange = {handleChange}
+            />
+            <input 
+            type = "text"
+            name = "street"
+            value = {inputs.street}
+            id = "street"
+            className="input"
+            placeholder="Street"
+            onChange={handleChange}
+            />
+            <div className="location-container">
+            <input 
+            type = "text"
+            name = "location"
+            value = {inputs.location}
+            id = "location"
+            className="input"
+            placeholder = "City, State"
+            onChange = {handleChange}
+            />
+            <input 
+            type = "number"
+            name = "zip"
+            value = {inputs.zip}
+            id = "zip"
+            className="input"
+            placeholder = "Zip Code"
+            onChange={handleChange}
+            />
+            </div>
+            <input 
+            type = "tel"
+            name = "tel"
+            value = {inputs.tel}
+            id = "tel"
+            className="input"
+            placeholder = "Phone"
             onChange = {handleChange}
             />
             <input 
@@ -78,24 +120,9 @@ function sendEmail(e){
             name = "email"
             value = {inputs.email}
             id = "email"
-            placeholder = "johndoe@example.com"
+            className="input"
+            placeholder = "Email"
             required = {true}
-            onChange = {handleChange}
-            />
-            <input 
-            type = "tel"
-            name = "tel"
-            value = {inputs.tel}
-            id = "tel"
-            placeholder = "555-555-5555"
-            onChange = {handleChange}
-            />
-            <input 
-            type = "text"
-            name = "location"
-            value = {inputs.location}
-            id = "location"
-            placeholder = "City, State"
             onChange = {handleChange}
             />
             <textarea 
@@ -103,10 +130,14 @@ function sendEmail(e){
             name = "details"
             value = {inputs.details}
             id = "details"
-            placeholder = "Anything else you want us to know?"
+            className="input"
+            placeholder = "What would you like to discuss?"
             onChange = {handleChange}
             />
-            <button type="submit" className="btn" >Submit</button>
+            <button type="submit" className="btn">
+                <img src="../../public/Letter.png" className='letter' />
+                SEND FORM
+            </button>
             {errorMsg && <h3 className = "errorMsg" >Something went wrong... Kindly email your information and someone will get back to you</h3>}
         </form>
     }
