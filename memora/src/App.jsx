@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header'
-// import Navbar from './components/Navbar'
+import Navbar from './components/Navbar'
 import Experiences from './components/Experiences'
 import Mission from './components/Mission'
 import Photo from './components/Photo'
@@ -14,7 +14,7 @@ function App() {
     <>
   
 <Header/>
-    {/* <Navbar/> */}
+<Navbar />
     <Experiences/>
     <Mission/>
     <Photo/>

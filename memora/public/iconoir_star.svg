@@ -1,0 +1,28 @@
+<svg width="64" height="65" viewBox="0 0 64 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="iconoir:star" clip-path="url(#clip0_327_735)">
+<g id="Vector" filter="url(#filter0_dd_327_735)">
+<path d="M22.8986 22.4626L29.8266 8.51059C30.0283 8.10682 30.3384 7.76721 30.7223 7.52984C31.1062 7.29248 31.5486 7.16675 31.9999 7.16675C32.4513 7.16675 32.8937 7.29248 33.2776 7.52984C33.6614 7.76721 33.9716 8.10682 34.1733 8.51059L41.1013 22.4626L56.5893 24.7133C57.036 24.7752 57.4563 24.9615 57.8023 25.2509C58.1482 25.5403 58.4058 25.9211 58.5457 26.3499C58.6855 26.7786 58.702 27.2381 58.5933 27.6758C58.4845 28.1135 58.2549 28.5118 57.9306 28.8253L46.7253 39.6786L49.3706 55.0119C49.7093 56.9799 47.6293 58.4786 45.8506 57.5506L31.9999 50.3079L18.1466 57.5506C16.3706 58.4813 14.2906 56.9799 14.6293 55.0093L17.2746 39.6759L6.06928 28.8226C5.74657 28.5089 5.51834 28.111 5.41051 27.6741C5.30269 27.2372 5.3196 26.7788 5.45933 26.351C5.59905 25.9232 5.85599 25.5432 6.20093 25.2541C6.54586 24.9651 6.96497 24.7786 7.41061 24.7159L22.8986 22.4626Z" stroke="#17292C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_dd_327_735" x="-0.659546" y="3.16675" width="65.3237" height="64.6692" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_327_735"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-1"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.854902 0 0 0 0 0.890196 0 0 0 0 0.898039 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_327_735" result="effect2_dropShadow_327_735"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_327_735" result="shape"/>
+</filter>
+<clipPath id="clip0_327_735">
+<rect width="64" height="64" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg>
