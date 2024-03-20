@@ -1,3 +1,297 @@
+@font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* body styling */
+.contact-body {
+    background-color: #17292C;
+    padding: 20px 50px;
+}
+
+/* text styling */
+.contact-txt {
+    margin-left: 60px;
+    padding-top: 45px;
+    padding-left: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-txt > h2 {
+    font-family: 'Voga';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 100;
+    color: #DAE3E5;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+}
+
+.contact-txt > h3 {
+    font-family: 'Abel';
+    font-style: normal;
+    color: #DAE3E5;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    line-height: 160%; /* 51.2px */
+}
+
+/* logo styling */
+.logo {
+    width: 139px;
+    height: 216px;
+    flex-shrink: 0;
+    float: right;
+    margin-top: 10px;
+    margin-right: 80px;
+}
+
+/* form styling */
 .contact{
-    border: solid violet 1px
+    padding: 10px;
+    display:flex;
+    margin-left: 40px;
+}
+
+.form {
+    margin-left: 50px;
+}
+
+.input {
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #000;
+    background: linear-gradient(180deg, rgba(191, 191, 191, 0.25) 0%, rgba(218, 227, 229, 0.25) 49%);
+    text-align: left;
+    margin: 16px;
+    padding: 10px 5px;
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* text styling for input boxes */
+.input {
+    color: rgba(218, 227, 229, 0.50);
+    font-family: 'Inter';
+    font-size: 13.071px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 20.914px */
+    letter-spacing: 0.408px;
+}
+
+.contact > form > textarea {
+    resize: none;
+    padding-bottom: 100px;
+    white-space: nowrap;
+    height: 160px; 
+}
+
+.location-container {
+    display: flex;
+    margin: -12px;
+    margin-left: 0px;
+}
+
+#location {
+    display: flex;
+    width: 350px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    /* padding: 10px 5px; */
+    align-items: center;
+    margin-right: 0px;
+}
+
+#zip {
+    display: flex;
+    width: 140px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    /* padding: 8.169px; */
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* turning off number arrows/spinners for number input */
+.input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Webkit browsers */
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn {
+    background-color: #5E6C5A;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    width: 500px;
+    height: 64px;
+    margin: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.letter {
+    margin-top: -1px;
+    margin-right: 5px;
+}
+
+.contact-image {
+    display: flex;
+    width: 484px;
+    height: 525px;
+    align-items: center;
+    gap: 8px;
+    margin-right: 100px;
+    order: 2;
+    margin-left: 110px;
+    margin-top: 16px;
+}
+
+/* responsive styling */
+@media screen and (max-width: 480px) {
+    .contact-body {
+        padding: 20px;
+        width: 100vw;
+    }
+
+    /* txt styling */
+    .contact-txt {
+        margin: auto;
+        margin-left: 40px;
+        padding-left: 15px;
+        padding-top: 30px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-txt > h2 {
+        font-size: 40px;
+    }
+
+    .contact-txt > h3 {
+        font-size: 16px;
+    }
+
+    /* disabling images */
+    .logo {
+        display: none;
+    }
+
+    .contact-image {
+        display: none;
+    }
+
+    /* form styling */
+    .form {
+        margin-left: 0px;
+    }
+
+    .contact {
+        display: flex;
+        padding: 13.071px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-left: 0px;
+    }
+
+    .input {
+        display: flex;
+        width: 324px;
+        height: 44px;
+        padding: 4.085px;
+        align-items: center;
+        gap: 4.085px;
+        margin-left: 10px;
+        border-radius: 4px;
+    }
+
+    .contact > form > textarea {
+        height: 97.5px;
+        padding: 4.085px;
+    }
+
+    .location-container {
+        flex-direction: column;
+    }
+
+    #location, #zip {
+        width: 324px;
+        margin: 8px 10px;
+    }
+
+    .btn {
+        width: 216px;
+        height: 32px;
+        border-radius: 4px;
+        margin: auto;
+        font-size: 8px;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .letter {
+        margin-top: 1px;
+        margin-right: 3.75px;
+        width: 8.5px;
+        height: 8.5px;
+        flex-shrink: 0; 
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    /* .contact-body {
+        padding: 20px;
+        width: 100vw;
+    } */
+
+    .contact-image {
+        display: none;
+    }
 }
