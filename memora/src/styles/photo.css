@@ -7,7 +7,6 @@
 
 .photoContainer{
     height: 45vw;
-    border: solid 1px red
 }
 
 .photo{
@@ -22,6 +21,7 @@ display: flex; /* Use flexbox */
   position: relative;
   left:53%;
   transform: translateY(-20%);
+  z-index: 1;
 }
 
 .mary {
@@ -42,6 +42,56 @@ max-width:60vw;
 top: 33%;
 left:35%;
 transform:translate(-50%, -50%);
-border: solid 1px red;
-z-index: 1;
+z-index: 2;
+}
+
+@media only screen and (max-width: 1100px){
+    .photoContainer{
+        /* position: relative;
+        transform: translateY(-20%); */
+    }
+
+    .photo {
+        position: relative;
+        /* left:53%; */
+        transform: translateY(-50%);
+    }
+    .memorable {
+        z-index: 2; /* Add this line to ensure z-index is applied within the media query */
+        max-width: 70vw;
+        transform:translate(-50%, -90%);
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .photoContainer{
+        height:90vw;
+
+    }
+
+    .photo {
+        border-radius: 100%;
+        height:60vw;
+        width: 60vw;
+    background: #26373C;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.50);
+    display: flex; /* Use flexbox */
+      justify-content: center; 
+      align-items:flex-end;
+      position: relative;
+      left:50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .mary{
+        height: 75vw
+    }
+    .memorable {
+/* display:none */
+top: 50%;
+left:50%;
+transform:translate(-50%, -50%);
+    }
 }
