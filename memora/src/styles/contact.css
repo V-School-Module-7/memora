@@ -74,11 +74,8 @@
 .contact{
     padding: 10px;
     display:flex;
-    margin-left: 40px;
-}
-
-.form {
-    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .input {
@@ -126,7 +123,6 @@
     width: 350px;
     margin-top: 11px;
     margin-bottom: 11px;
-    /* padding: 10px 5px; */
     align-items: center;
     margin-right: 0px;
 }
@@ -136,7 +132,6 @@
     width: 140px;
     margin-top: 11px;
     margin-bottom: 11px;
-    /* padding: 8.169px; */
     align-items: center;
     margin-left: 10px;
 }
@@ -154,8 +149,36 @@
     margin: 0;
 }
 
-.btn {
-    background-color: #5E6C5A;
+/* btn styling along with animation styling after  submit */
+/* Loading animation */
+.loadingAnimation {
+    position: relative;
+  }
+  
+  .loadingAnimation .loader {
+    position: absolute;
+    width: 100%;
+    height: 10px; 
+    background-color: #17292C;
+    top: 0%;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: loadingBar 1s linear forwards;
+  }
+  
+  @keyframes loadingBar {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  /* Button styles */
+  .btn {
+    background-color: #5e6c5a;
     font-family: 'Montserrat';
     font-style: normal;
     font-size: 16px;
@@ -172,33 +195,124 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
+    position: relative; 
+    overflow: hidden; 
+  }
 
-.letter {
+  .letter {
     margin-top: -1px;
     margin-right: 5px;
 }
 
+/* letter animation */
+  .letter-animation {
+    transition: transform 1s linear;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.btn.loadingAnimation .letter-animation {
+    transform: translateX(calc(100% + 500px));
+}
+  
 .contact-image {
     display: flex;
-    width: 484px;
-    height: 525px;
+    width: 100%; 
+    max-width: 484px; 
+    height: auto; 
+    margin-top: -17px; 
     align-items: center;
-    gap: 8px;
-    margin-right: 100px;
-    order: 2;
     margin-left: 110px;
-    margin-top: 16px;
 }
 
 /* responsive styling */
+@media screen and (max-width: 1280px) {
+
+    .contact-image {
+       margin-left: auto;
+    }
+
+    .contact {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 1135px) {
+
+    .contact-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 930px) {
+
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 625px) and (max-width: 767px) {
+
+    .input {
+        width: 400px;
+    }
+
+    .btn {
+        width: 400px;
+    }
+
+    .btn.loadingAnimation .letter-animation {
+        transform: translateX(calc(100% + 400px));
+    }
+    
+    #location {
+        width: 290px;
+    }
+
+    #zip {
+        width: 100px;
+    }
+
+}
+
+@media screen and (min-width: 479px) and (max-width: 624px) {
+
+    .contact-txt {
+        margin-left: 30px;
+    }
+    .input {
+        width: 300px;
+        margin: 10px;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 300px;
+        margin: 10px;
+    }
+
+    .btn.loadingAnimation .letter-animation {
+        transform: translateX(calc(100% + 300px));
+    }
+
+    #zip {
+        width: 70px;
+    }
+
+    #location {
+        width: 220px;
+    }
+}
+
+/* mobile responsive styling */
 @media screen and (max-width: 480px) {
     .contact-body {
         padding: 20px;
         width: 100vw;
     }
-
-    /* txt styling */
+    
     .contact-txt {
         margin: auto;
         margin-left: 40px;
@@ -214,20 +328,6 @@
 
     .contact-txt > h3 {
         font-size: 16px;
-    }
-
-    /* disabling images */
-    .logo {
-        display: none;
-    }
-
-    .contact-image {
-        display: none;
-    }
-
-    /* form styling */
-    .form {
-        margin-left: 0px;
     }
 
     .contact {
@@ -275,8 +375,12 @@
         line-height: normal;
     }
 
+    .btn.loadingAnimation .letter-animation {
+        transform: translateX(calc(100% + 216px));
+    }
+
     .letter {
-        margin-top: 1px;
+        margin-top: 0px;
         margin-right: 3.75px;
         width: 8.5px;
         height: 8.5px;
@@ -284,14 +388,4 @@
     }
 }
 
-@media screen and (max-width: 780px) {
 
-    /* .contact-body {
-        padding: 20px;
-        width: 100vw;
-    } */
-
-    .contact-image {
-        display: none;
-    }
-}
