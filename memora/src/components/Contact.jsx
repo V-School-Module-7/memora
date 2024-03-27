@@ -15,8 +15,8 @@ export default function Contact(){
             
 
             <div className = "contact">
-            <img src="../../public/contactform.png" className="contact-image" />
             <Form/>
+            <img src="../../public/contactform.png" className="contact-image" />
             </div>
         </div>
     )
