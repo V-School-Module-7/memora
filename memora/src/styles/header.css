@@ -6,7 +6,8 @@
   }
 
 .header{
-    height: 100vh
+    height: 100vh;
+    position:relative
 }
 
 
@@ -14,13 +15,14 @@
     width: 70vw;
     height: auto;
     flex-shrink: 0;
-    position: absolute;
+    position: relative;
     top: 45%;
     left:50%;
     transform: translate(-50%, -50%);
     border-radius: 0.5rem;
-    background: rgba(218, 227, 229, 0.005);
+    background: rgba(218, 227, 229, 0.050);
     backdrop-filter: blur(5px);
+    /* z-index:12; */
 }
 
 /* .navbar{

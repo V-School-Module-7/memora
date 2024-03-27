@@ -6,7 +6,7 @@ export default function Photo(){
         <div className = 'photoContainer'>
         <h1 className = "memorable">Memorable Authentic Togetherness</h1>
         <div className = "photo">
-        <img src = "../../Mary.png" className = "mary"></img>
+        <img src = "/Mary.png" className = "mary"></img>
         </div>
         </div>
     )

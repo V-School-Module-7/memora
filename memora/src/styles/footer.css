@@ -1,3 +1,81 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  
 .footer{
-    border: solid pink 1px
+    width: 100vw;
+    height: 30vw;
+    max-height: 30rem;
+    flex-shrink: 0;
+    background: #5E6C5A;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.footerImage{
+width: 50vw;
+max-width: 37.26956rem;
+flex-shrink: 0;
+margin-bottom: 1rem;
+/* border-radius: 0.26713rem;
+background-blend-mode: lighten;
+backdrop-filter: opacity(1); */
+/* position:relative; */
+/* z-index: 100; */
+/* isolation: isolate;
+mix-blend-mode: luminosity; */
+}
+
+.socialIcon{
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    color: #dae3e5;
+    margin : 1rem 0.5rem 1rem 0.5rem
+}
+
+.footer > h4 {
+    color: #FFF;
+font-family: 'Inter';
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 1.6rem */
+letter-spacing: 0.09375rem;
+margin-top: 1rem;
+}
+
+@media only screen and (max-width : 1100px){
+
+    .footer {
+        height:40vw
+    }
+
+
+    .socialIcon{
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        color: #dae3e5;
+        margin : 0.5rem 0.25rem 0.5rem 0.25rem
+    }
+    
+    .footer > h4 {
+        color: #FFF;
+    font-family: 'Inter';
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 1.6rem */
+    letter-spacing: 0.09375rem;
+    margin-top: 0.5rem;
+    }
 }
