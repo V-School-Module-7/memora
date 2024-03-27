@@ -57,16 +57,16 @@ z-index: 2;
         transform: translateY(-50%);
     }
     .memorable {
-        z-index: 2; /* Add this line to ensure z-index is applied within the media query */
+        z-index: 2;
         max-width: 70vw;
         transform:translate(-50%, -90%);
         font-size: 3rem;
     }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 800px){
     .photoContainer{
-        height:90vw;
+        height:60vw;
 
     }
 
@@ -81,17 +81,44 @@ z-index: 2;
       align-items:flex-end;
       position: relative;
       left:50%;
-      top:50%;
+      top:40%;
       transform: translate(-50%, -50%);
       z-index: 1;
+ 
     }
     .mary{
-        height: 75vw
+        height: 75vw;
     }
     .memorable {
 /* display:none */
+font-size: 3.5rem;
 top: 50%;
 left:50%;
-transform:translate(-50%, -50%);
+transform:translateX(-50%);
     }
+}
+
+@media only screen and (max-width: 600px){
+
+    .photo{
+        top:35%;
+    }
+
+.memorable{
+    font-size: 2.5rem;
+}
+
+}
+
+@media only screen and (max-width: 480px){
+
+    .photo{
+        top:35%;
+    }
+
+.memorable{
+    font-size: 2rem;
+    top:70%
+}
+
 }

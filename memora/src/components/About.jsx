@@ -1,12 +1,13 @@
 import React from "react";
 import "../styles/about.css"
 
+
 export default function About(){
     return(
         <div className = "about">
             <div className = "aboutContainer">
             <div className = "aboutElement">
-            <img src = "../../public/champagne.svg"></img>
+            <img src = "/champagne.svg"></img>
             <div className = "textContainer">
              <h2>Welcome to Memora Events</h2>
             <h3 className = "smallText">At Memora Events, every gathering becomes a cherished memory. Guided by a collective vision honed from over a decade of combined experience, our team is dedicated to delivering unparalleled experiences that leave lasting impressions.</h3>
