@@ -17,8 +17,8 @@ export default function Footer(){
         <div className = "footer">
             <img src = "/FooterLogoScreenshot.png" className = "footerImage"></img>
             <div className = "socialIcons">
-            <FontAwesomeIcon icon={faEnvelope} className = "socialIcon"/>
-            <FontAwesomeIcon icon={faXTwitter} className = "socialIcon"/>
+            {/* <FontAwesomeIcon icon={faEnvelope} className = "socialIcon"/> */}
+            {/* <FontAwesomeIcon icon={faXTwitter} className = "socialIcon"/> */}
 <FontAwesomeIcon icon={faSquareFacebook} className = "socialIcon"/>
 <FontAwesomeIcon icon={faLinkedin} className = "socialIcon"/>
 <FontAwesomeIcon icon={faInstagram} className = "socialIcon"/>
