@@ -61,7 +61,7 @@ function sendEmail(e){
         <>
         {emailSent? 
     
-    <h3 className = "submitMsg">Thank you for submitting your information, someone will be in contact with you soon!</h3>
+    <h3 className = "submitMsg">Thank you for submitting your information and someone will be in contact with you soon!</h3>
 
     
     :
@@ -138,7 +138,7 @@ function sendEmail(e){
                 <img src="/Letter.png" className='letter' />
                 SEND FORM
             </button>
-            {errorMsg && <h3 className = "errorMsg" >Something went wrong... Kindly email your information and someone will get back to you</h3>}
+            {errorMsg && <h3 className = "errorMsg" >Something went wrong... Kindly email your information at info@memora.events and someone will get back to you</h3>}
         </form>
     }
         </>
