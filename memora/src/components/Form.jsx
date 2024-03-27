@@ -135,7 +135,7 @@ function sendEmail(e){
             onChange = {handleChange}
             />
             <button type="submit" className="btn">
-                <img src="../../public/Letter.png" className='letter' />
+                <img src="/Letter.png" className='letter' />
                 SEND FORM
             </button>
             {errorMsg && <h3 className = "errorMsg" >Something went wrong... Kindly email your information and someone will get back to you</h3>}
