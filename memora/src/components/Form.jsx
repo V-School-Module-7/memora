@@ -16,7 +16,7 @@ export default function Form() {
   const [inputs, setInputs] = useState(initInputs)
   const [loading, setLoading] = useState(false)
   const [emailSent, setEmailSent] = useState(false)
-  const [errorMsg, setErrorMsg] = useState(true)
+  const [errorMsg, setErrorMsg] = useState(false)
 
   function handleChange(event) {
     const { name, value } = event.target
