@@ -42,28 +42,26 @@ export default function Form() {
             setInputs(initInputs)
           }, 1000)
       } else {
-    // emailjs
-    //   .sendForm("service_jcw02vr", "template_484tr6i", e.target, {
-    //     publicKey: "3LONeouWv0AZKZsK9",
-    //   })
-    //   .then(
-    //     (res) => {
-    //       setEmailSent(true);
-    //     })
-    //     .catch(
-    //     (error) => {
-    //       console.log('FAILED...', error.text);
-    //       setErrorMsg(true);
-    //     })
-    //     .finally(() => {
-    //       setTimeout(() => {
-        //     setLoading(false)
-        //     setEmailSent(true)
-        //     setInputs(initInputs)
-        //   }, 1000)
-    //     });
-
-    alert("failed the test")
+    emailjs
+      .sendForm("service_jcw02vr", "template_484tr6i", e.target, {
+        publicKey: "3LONeouWv0AZKZsK9",
+      })
+      .then(
+        (res) => {
+          setEmailSent(true);
+        })
+        .catch(
+        (error) => {
+          console.log('FAILED...', error.text);
+          setErrorMsg(true);
+        })
+        .finally(() => {
+          setTimeout(() => {
+            setLoading(false)
+            setEmailSent(true)
+            setInputs(initInputs)
+          }, 1000)
+        })
       }
   }
 
@@ -76,7 +74,7 @@ export default function Form() {
             id = "name"
             className="input"
             placeholder = "Full Name"
-            // required = {true}
+            required = {true}
             onChange = {handleChange}
             />
             <input 
@@ -124,7 +122,7 @@ export default function Form() {
             id = "email"
             className="input"
             placeholder = "Email"
-            // required = {true}
+            required = {true}
             onChange = {handleChange}
             />
             <textarea 
