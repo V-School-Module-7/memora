@@ -74,7 +74,7 @@ export default function Form() {
             id = "name"
             className="input"
             placeholder = "Full Name"
-            required = {true}
+            // required = {true}
             onChange = {handleChange}
             />
             <input 
@@ -122,7 +122,7 @@ export default function Form() {
             id = "email"
             className="input"
             placeholder = "Email"
-            required = {true}
+            // required = {true}
             onChange = {handleChange}
             />
             <textarea 
