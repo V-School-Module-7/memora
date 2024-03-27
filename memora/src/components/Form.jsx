@@ -137,14 +137,14 @@ export default function Form() {
           <button type="submit" className={`btn ${loading ? 'loadingAnimation' : ''}`}>
             {loading ? (
                 <> 
-                    <img src="../../public/Letter.png" className="letter-animation" alt="Letter icon" />
+                    <img src="/Letter.png" className="letter-animation" alt="Letter icon" />
                     SENDING...
                     <div className="loader"></div>
                 </>
             ) : (
                 emailSent ? "SENT!" : (
                     <>
-                        <img src="../../public/Letter.png" className="letter" alt="Letter icon" />
+                        <img src="/Letter.png" className="letter" alt="Letter icon" />
                         SEND FORM
                     </>
                   )
