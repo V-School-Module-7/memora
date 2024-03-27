@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/header.css"
-import MemoraLogo from '../../public/MemoraLogo.png'
+import MemoraLogo from '/MemoraLogo.png'
 
 export default function Header(){
     return(
