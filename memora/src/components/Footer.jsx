@@ -15,7 +15,7 @@ faEnvelope
 export default function Footer(){
     return(
         <div className = "footer">
-            <img src = "../public/FooterLogoScreenshot.png" className = "footerImage"></img>
+            <img src = "/FooterLogoScreenshot.png" className = "footerImage"></img>
             <div className = "socialIcons">
             <FontAwesomeIcon icon={faEnvelope} className = "socialIcon"/>
             <FontAwesomeIcon icon={faXTwitter} className = "socialIcon"/>
