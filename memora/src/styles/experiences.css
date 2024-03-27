@@ -21,7 +21,7 @@ display: flex;
 position:relative;
 justify-content: space-around;
 padding-top: 4.5rem;
-transform:  translateY(-1%)
+transform:  translateY(-0.5%)
 }
 
 .textContainer{

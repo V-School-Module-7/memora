@@ -71,7 +71,7 @@ gap: 0.5rem;
 .missionText{
     align-items: center;
     width:80vw;
-    top:30%
+    top:30%;
 }
 
     .missionText > h1{
@@ -87,7 +87,16 @@ line-height: 2.5rem; /* 150% */
     }
 }
 
-@media only screen and (max-width : 480px){
+@media only screen and (max-width : 800px){
+
+
+.missionText{
+    top:50%
+}
+
+}
+
+@media only screen and (max-width : 510px){
 
     .missionText > h1{
 margin-bottom: 4rem;

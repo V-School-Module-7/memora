@@ -15,12 +15,12 @@ function App() {
   
 <Header/>
 <Navbar />
-    <Experiences/>
-    <Mission/>
-    <Photo/>
-    <About/>
-    <Contact/>
-    <Footer/>
+<Experiences/>
+<Mission/>
+<Photo/>
+<About/>
+<Contact/>
+<Footer/>
     </>
   )
 }

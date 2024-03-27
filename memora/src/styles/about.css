@@ -6,7 +6,7 @@
   }
 
 .about{
-    display: inline-flex;
+    display: flex;
     padding: 11.8125rem 3.625rem 11.8125rem 3.5625rem;
     justify-content: center;
     align-items: center;
@@ -56,8 +56,11 @@ margin: 1rem;
 @media only screen and (max-width: 1100px){
     .about{
         position: relative;
-        transform: translateY(-20%);
+        transform: translateY(-30%);
+
+        padding: 5.8125rem 3.625rem 5.8125rem 3.5625rem;
     }
+
 
     .textContainer > h2 {
         color: #DAE3E5;
@@ -84,7 +87,7 @@ margin: 1rem;
 @media only screen and (max-width: 900px){
     .about{
         position: relative;
-        transform: translateY(10%);
+        transform: translateY(-20%);
     }
 
     .aboutElement{
@@ -112,5 +115,28 @@ margin: 1rem;
     line-height: 1.5rem;
     width:60vw;
     margin: 1rem;
+    }
+}
+
+@media only screen and (max-width : 800px){
+    .about{
+        transform: translateY(0%);
+    }
+}
+
+@media only screen and (max-width : 600px){
+    
+    .textContainer > h2 {
+    font-size: 1.75rem;
+    }
+
+    .aboutElement > img {
+        width : 3rem
+    }
+}
+
+@media only screen and (max-width : 480px){
+    .about{
+        transform: translateY(0%);
     }
 }
