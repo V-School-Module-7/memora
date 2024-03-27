@@ -1,73 +1,73 @@
-import React from "react";
-import { ReactDOM, useState } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import "../styles/contact.css"
+import "../styles/contact.css";
 
-export default function Form(){
+export default function Form() {
+  const initInputs = {
+    name: "",
+    street: "",
+    location: "",
+    zip: "",
+    tel: "",
+    email: "",
+    details: "",
+  };
 
-
-    const initInputs = {
-        name : "",
-        street : "",
-        location : "",
-        zip : "",
-        tel : "",
-        email : "",
-        details : ""
-      }
-  
   const [inputs, setInputs] = useState(initInputs)
-  const isDisabled = !(inputs.name && inputs.email);
-      const [emailSent, setEmailSent] = useState(false)
-      const [errorMsg, setErrorMsg] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [emailSent, setEmailSent] = useState(false)
+  const [errorMsg, setErrorMsg] = useState(false)
 
-  function handleChange(event){
-    const {name, value} = event.target
-    setInputs(prevFormData => {
-        return {
-            ...prevFormData,
-            [name] : value
-        }
+  function handleChange(event) {
+    const { name, value } = event.target
+    setInputs((prevFormData) => {
+      return {
+        ...prevFormData,
+        [name]: value,
+      }
     })
-}
+  }
 
-function sendEmail(e){
+  function sendEmail(e) {
     e.preventDefault()
-    console.log(inputs)
+    setLoading(true)
+
+    //check if page is in development mode to prevent accidental submissions to form
+    //this can be removed/disabled before it hits production if needed
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        console.log("Email not sent due to being in development mode:", inputs);
+        setTimeout(() => {
+            setLoading(false)
+            setEmailSent(true)
+            setInputs(initInputs)
+          }, 1000)
+      } else {
     emailjs
-    .sendForm(
-        // service ID
-        "service_jcw02vr",
-//template id
-        "template_484tr6i",
-        e.target,
-        {
-            publicKey : "3LONeouWv0AZKZsK9"
+      .sendForm("service_jcw02vr", "template_484tr6i", e.target, {
+        publicKey: "3LONeouWv0AZKZsK9",
+      })
+      .then(
+        (res) => {
+          setEmailSent(true);
         })
-        .then(
-            (res) => {
-              setEmailSent(true);
-            })
-            .catch(
-            (error) => {
-              console.log('FAILED...', error.text);
-              setErrorMsg(true)
-            },
-          );
-    setInputs(initInputs)
-}
+        .catch(
+        (error) => {
+          console.log('FAILED...', error.text);
+          setErrorMsg(true);
+        })
+        .finally(() => {
+          setTimeout(() => {
+            setLoading(false)
+            setEmailSent(true)
+            setInputs(initInputs)
+          }, 1000)
+        })
+      }
+  }
 
-    return(
-        <>
-        {emailSent? 
-    
-    <h3 className = "submitMsg">Thank you for submitting your information, someone will be in contact with you soon!</h3>
-
-    
-    :
-
-        <form className = "form" onSubmit = {sendEmail}>
-        <input 
+  return (
+        <form className="form" onSubmit={sendEmail}>
+          <input 
             type = "text"
             name = "name"
             value = {inputs.name}
@@ -134,13 +134,28 @@ function sendEmail(e){
             placeholder = "What would you like to discuss?"
             onChange = {handleChange}
             />
-            <button type="submit" className="btn">
-                <img src="/Letter.png" className='letter' />
-                SEND FORM
-            </button>
-            {errorMsg && <h3 className = "errorMsg" >Something went wrong... Kindly email your information and someone will get back to you</h3>}
+          <button type="submit" className={`btn ${loading ? 'loadingAnimation' : ''}`}>
+            {loading ? (
+                <> 
+                    <img src="../../public/Letter.png" className="letter-animation" alt="Letter icon" />
+                    SENDING...
+                    <div className="loader"></div>
+                </>
+            ) : (
+                emailSent ? "SENT!" : (
+                    <>
+                        <img src="../../public/Letter.png" className="letter" alt="Letter icon" />
+                        SEND FORM
+                    </>
+                  )
+            )}
+          </button>
+          {errorMsg && (
+            <h3 className="errorMsg">
+              Something went wrong... Kindly email your information and someone
+              will get back to you
+            </h3>
+          )}
         </form>
-    }
-        </>
-    )
+  )
 }
