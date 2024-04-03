@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
-import "../styles/contact.css";
+import React, { useState, useEffect } from "react"
+import emailjs from "@emailjs/browser"
+import "../styles/contact.css"
 
 export default function Form() {
   const initInputs = {
@@ -35,7 +35,7 @@ export default function Form() {
     //check if page is in development mode to prevent accidental submissions to form
     //this can be removed/disabled before it hits production if needed
     if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-        console.log("Email not sent due to being in development mode:", inputs);
+        console.log("Email not sent due to being in development mode:", inputs)
         setTimeout(() => {
             setLoading(false)
             setEmailSent(true)
@@ -52,8 +52,8 @@ export default function Form() {
         })
         .catch(
         (error) => {
-          console.log('FAILED...', error.text);
-          setErrorMsg(true);
+          console.log('FAILED...', error.text)
+          setErrorMsg(true)
         })
         .finally(() => {
           setTimeout(() => {
@@ -64,6 +64,16 @@ export default function Form() {
         })
       }
   }
+
+  useEffect(() => {
+    let timer
+    if (emailSent) {
+      timer = setTimeout(() => {
+        setEmailSent(false)
+      }, 5000)
+    }
+    return () => clearTimeout(timer)
+  }, [emailSent])
 
   return (
         <form className="form" onSubmit={sendEmail}>
@@ -138,6 +148,7 @@ export default function Form() {
             {loading ? (
                 <> 
                     <img src="/Letter.png" className="letter-animation" alt="Letter icon" />
+                    <img src="/sendArrow.png" className="arrow-animation" alt="Arrow icon" />
                     SENDING...
                     <div className="loader"></div>
                 </>
@@ -145,6 +156,7 @@ export default function Form() {
                 emailSent ? "SENT!" : (
                     <>
                         <img src="/Letter.png" className="letter" alt="Letter icon" />
+                        <img src="/sendArrow.png" className="arrow" alt="Arrow icon" />
                         SEND FORM
                     </>
                   )
