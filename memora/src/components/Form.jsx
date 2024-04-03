@@ -70,7 +70,7 @@ export default function Form() {
     if (emailSent) {
       timer = setTimeout(() => {
         setEmailSent(false)
-      }, 1000)
+      }, 5000)
     }
     return () => clearTimeout(timer)
   }, [emailSent])
