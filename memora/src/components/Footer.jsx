@@ -19,9 +19,9 @@ export default function Footer(){
             <div className = "socialIcons">
             {/* <FontAwesomeIcon icon={faEnvelope} className = "socialIcon"/> */}
             {/* <FontAwesomeIcon icon={faXTwitter} className = "socialIcon"/> */}
-<FontAwesomeIcon icon={faSquareFacebook} className = "socialIcon"/>
+{/* <FontAwesomeIcon icon={faSquareFacebook} className = "socialIcon"/>
 <FontAwesomeIcon icon={faLinkedin} className = "socialIcon"/>
-<FontAwesomeIcon icon={faInstagram} className = "socialIcon"/>
+<FontAwesomeIcon icon={faInstagram} className = "socialIcon"/> */}
             </div>
         <h4>info@memora.events</h4>
         </div>
