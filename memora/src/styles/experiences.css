@@ -12,6 +12,13 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .experiences{
     width: 100vw;
 height: 46.0625rem;
@@ -20,12 +27,14 @@ background: #26373D;
 display: flex;
 position:relative;
 justify-content: space-around;
-padding-top: 4.5rem;
-transform:  translateY(-0.5%)
+/* border: solid 1px red; */
+padding: 4.5rem 10% 0rem 10%;
+transform:  translateY(-0.5%);
+/* z-index : 3 */
 }
 
 .textContainer{
-    width: 40vw
+    width: 30vw;
 }
 
 .experiencesTitle{
@@ -39,8 +48,8 @@ line-height: normal;
 }
 
 .experiencesText{
-width: 29.8125rem;
-height: 6.5rem;
+width:100%;
+/* height: 6.5rem; */
 flex-shrink: 0;
 color: #DAE3E5;
 font-family: 'Abel';
@@ -48,12 +57,14 @@ font-size: 1.5rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-bottom: 1.5rem;
 }
 
 .getInTouch{
     display: inline-flex;
-    font-family: 'Abel';
+    font-family: 'Montserrat';
     padding: 1rem;
+    width: 100%;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -61,22 +72,12 @@ line-height: normal;
 background: #FFF;
 border:none;
 margin-right: 1rem;
-}
-
-.learnMore{
-    display: inline-flex;
-    padding: 1rem;
-    justify-content: center;
-    font-family: 'Abel';
-    align-items: center;
-    gap: 1rem;
-    border-radius: 0.5rem;
-background: #5E6C5A;
-border:none
+margin-bottom: 1rem;
 }
 
 .experiencesImage{
     width: 34.125rem;
+    /* max-width: 30vw; */
 height: 37.25rem;
 flex-shrink: 0;
 border-radius: 0.5rem;
@@ -84,6 +85,16 @@ border-radius: 0.5rem;
 
 .experiencesImageSmall{
     display:none
+}
+
+@media only screen and (max-width : 1400px){
+    .experiencesImage{
+        width: 24.125rem;
+        /* max-width: 30vw; */
+    height: 37.25rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    }
 }
 
 @media only screen and (max-width : 1100px){
@@ -130,9 +141,9 @@ border-radius: 0.5rem;
         display:none
     }
 
-    .getInTouch, .learnMore {
+    /* .getInTouch, .learnMore {
         display:none
-    }
+    } */
 }
 
 @media only screen and (max-width: 480px){

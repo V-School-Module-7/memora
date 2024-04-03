@@ -19,16 +19,6 @@ export default function Experiences(){
                             duration={600}
                         >Get In Touch</Link>
             {/* <button className = "getInTouch">Get In Touch</button> */}
-            <Link
-                            activeClass="active"
-                            className="learnMore"
-                            to="about"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={600}
-                        >Learn More</Link>
-            {/* <button className = "learnMore">Learn More</button> */}
             </div>
             <img src = 'image1.jpg' className = "experiencesImage"></img>
         </div>
