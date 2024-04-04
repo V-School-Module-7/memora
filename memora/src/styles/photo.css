@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.photoContainer{
+    height: 45vw;
+}
+
+.photo{
+    border-radius: 100%;
+    height:40vw;
+    width: 40vw;
+background: #26373C;
+box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.50);
+display: flex; /* Use flexbox */
+  justify-content: center; 
+  align-items:flex-end;
+  position: relative;
+  left:53%;
+  transform: translateY(-20%);
+  z-index: 1;
+}
+
+.mary {
+    height:50vw;
+}
+
+.memorable{
+    color: #DAE3E5;
+text-align: center;
+text-shadow: 0px 8px 16px rgba(0, 0, 0, 0.50);
+font-family: 'Voga';
+font-size: 4rem;
+font-style: normal;
+font-weight: 500;
+line-height: 4rem; /* 100% */
+position: relative;
+max-width:60vw;
+top: 33%;
+left:35%;
+transform:translate(-50%, -50%);
+z-index: 2;
+}
+
+@media only screen and (max-width: 1100px){
+    .photoContainer{
+        /* position: relative;
+        transform: translateY(-20%); */
+    }
+
+    .photo {
+        position: relative;
+        /* left:53%; */
+        transform: translateY(-50%);
+    }
+    .memorable {
+        z-index: 2;
+        max-width: 70vw;
+        transform:translate(-50%, -90%);
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .photoContainer{
+        height:60vw;
+
+    }
+
+    .photo {
+        border-radius: 100%;
+        height:60vw;
+        width: 60vw;
+    background: #26373C;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.50);
+    display: flex; /* Use flexbox */
+      justify-content: center; 
+      align-items:flex-end;
+      position: relative;
+      left:50%;
+      top:40%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+ 
+    }
+    .mary{
+        height: 75vw;
+    }
+    .memorable {
+/* display:none */
+font-size: 3.5rem;
+top: 50%;
+left:50%;
+transform:translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    .photo{
+        top:35%;
+    }
+
+.memorable{
+    font-size: 2.5rem;
+}
+
+}
+
+@media only screen and (max-width: 480px){
+
+    .photo{
+        top:35%;
+    }
+
+.memorable{
+    font-size: 2rem;
+    top:70%
+}
+
+}

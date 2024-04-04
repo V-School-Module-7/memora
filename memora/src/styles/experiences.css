@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.experiences{
+    width: 100vw;
+height: 46.0625rem;
+flex-shrink: 0;
+background: #26373D;
+display: flex;
+position:relative;
+justify-content: space-around;
+/* border: solid 1px red; */
+padding: 4.5rem 10% 0rem 10%;
+transform:  translateY(-0.5%);
+/* z-index : 3 */
+}
+
+.textContainer{
+    width: 30vw;
+}
+
+.experiencesTitle{
+    width: 34.125rem;
+    color: #DAE3E5;
+font-family: "Voga";
+font-size: 6rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.experiencesText{
+width:100%;
+/* height: 6.5rem; */
+flex-shrink: 0;
+color: #DAE3E5;
+font-family: 'Abel';
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 1.5rem;
+}
+
+.getInTouch{
+    display: inline-flex;
+    font-family: 'Montserrat';
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+background: #FFF;
+border:none;
+margin-right: 1rem;
+margin-bottom: 1rem;
+}
+
+.experiencesImage{
+    width: 34.125rem;
+    /* max-width: 30vw; */
+height: 37.25rem;
+flex-shrink: 0;
+border-radius: 0.5rem;
+}
+
+.experiencesImageSmall{
+    display:none
+}
+
+@media only screen and (max-width : 1400px){
+    .experiencesImage{
+        width: 24.125rem;
+        /* max-width: 30vw; */
+    height: 37.25rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    }
+}
+
+@media only screen and (max-width : 1100px){
+    .experiences{
+        flex-direction: column;
+        align-items: center;
+        height:auto;
+        transform:  translateY(-1%);
+    }
+
+    .textContainer{
+        width: 80vw;
+    }
+
+    .experiencesTitle{
+        width:80vw;
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    .experiencesImageSmall{
+        display:flex;
+        width: 80vw;
+        height: auto;
+        flex-shrink: 0;
+        border-radius: 0.5rem;
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+        margin-top: 4rem;
+    }
+
+.experiencesText{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    width:80vw;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+    .experiencesImage{
+        display:none
+    }
+
+    /* .getInTouch, .learnMore {
+        display:none
+    } */
+}
+
+@media only screen and (max-width: 480px){
+.experiencesTitle{
+    font-size: 2.5rem;
+}
+
+.experiencesText{
+    font-size: 1rem ;
+}
+}

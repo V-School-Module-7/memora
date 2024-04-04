@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Variable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* body styling */
+.contact-body {
+    background-color: #17292C;
+    padding: 20px 50px;
+}
+
+/* text styling */
+.contact-txt {
+    margin-left: 60px;
+    padding-top: 45px;
+    padding-left: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-txt > h2 {
+    font-family: 'Voga';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 100;
+    color: #DAE3E5;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+}
+
+.contact-txt > h3 {
+    font-family: 'Abel';
+    font-style: normal;
+    color: #DAE3E5;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    line-height: 160%;
+}
+
+/* logo styling */
+.logo {
+    width: 139px;
+    height: 216px;
+    flex-shrink: 0;
+    float: right;
+    margin-top: 10px;
+    margin-right: 80px;
+}
+
+/* form styling */
+.contact{
+    padding: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    border: none;
+    border-radius: 8px;
+    border-bottom: 1px solid #000;
+    background: linear-gradient(180deg, rgba(191, 191, 191, 0.25) 0%, rgba(218, 227, 229, 0.25) 49%);
+    text-align: left;
+    margin: 16px;
+    padding: 10px 5px;
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* text styling for input boxes */
+.input {
+    color: rgba(218, 227, 229, 0.50);
+    font-family: 'Inter';
+    font-size: 13.071px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.408px;
+}
+
+.contact > form > textarea {
+    resize: none;
+    padding-bottom: 100px;
+    white-space: nowrap;
+    height: 160px; 
+}
+
+.location-container {
+    display: flex;
+    margin: -12px;
+    margin-left: 0px;
+}
+
+#location {
+    display: flex;
+    width: 350px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    align-items: center;
+    margin-right: 0px;
+}
+
+#zip {
+    display: flex;
+    width: 140px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* turning off number arrows/spinners for number input */
+.input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Webkit browsers */
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* btn styling along with animation styling after  submit */
+.loadingAnimation {
+    position: relative;
+  }
+
+  .loadingAnimation .loader {
+    position: absolute;
+    width: 100%;
+    height: 10px; 
+    background-color: #17292C;
+    top: 0%;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  /* Button styles */
+  .btn {
+    background-color: #5e6c5a;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    width: 500px;
+    height: 64px;
+    margin: 16px;
+    border: none;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden; 
+  }
+
+  .letter {
+    margin-top: -1px;
+    margin-right: 5px;
+}
+
+.arrow {
+    opacity: 0;
+    position: absolute;
+}
+
+/* letter animation */
+  .letter-animation{
+    transition: transform 1s linear;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.btn.loadingAnimation .letter-animation{
+    transform: translateX(calc(100% + 500px));
+}
+
+/* arrow animation */
+.arrow-animation {
+    transition: transform 1s linear;
+    z-index: 2;
+    position: absolute;
+    left: 25px;
+    top: -1px;
+    width: 12px;
+    opacity: 1;
+  }
+  
+  .btn.loadingAnimation .arrow-animation {
+    transform: translateX(calc(100% + 500px));
+  }
+  
+/* error msg for form styling */
+.errorMsg {
+    font-family: 'Montserrat';
+    font-style: normal;
+    color: #DAE3E5;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    max-width: 400px;
+    margin: -10px auto;
+}
+  
+.contact-image {
+    width: 100%; 
+    max-width: 484px; 
+    height: auto; 
+    align-items: center;
+    margin-left: 110px;
+}
+
+/* responsive styling */
+@media screen and (max-width: 1280px) {
+
+    .contact-image {
+       margin-left: auto;
+    }
+
+    .contact {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 1135px) {
+
+    .contact-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 930px) {
+
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 625px) and (max-width: 767px) {
+
+    .input {
+        width: 400px;
+    }
+
+    .btn {
+        width: 400px;
+    }
+
+    .errorMsg {
+        max-width: 300px;
+    }
+
+    .btn.loadingAnimation .letter-animation {
+        transform: translateX(calc(100% + 400px));
+    }
+
+    .btn.loadingAnimation .arrow-animation {
+        transform: translateX(calc(100% + 400px));
+      }
+    
+    #location {
+        width: 290px;
+    }
+
+    #zip {
+        width: 100px;
+    }
+
+}
+
+@media screen and (min-width: 479px) and (max-width: 624px) {
+
+    .contact-txt {
+        margin-left: 30px;
+    }
+    .input {
+        width: 300px;
+        margin: 10px;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 300px;
+        margin: 10px;
+    }
+
+    .errorMsg {
+        max-width: 300px;
+    }
+
+    .btn.loadingAnimation .letter-animation {
+        transform: translateX(calc(100% + 300px));
+    }
+
+    .btn.loadingAnimation .arrow-animation {
+        transform: translateX(calc(100% + 300px));
+      }
+
+    #zip {
+        width: 70px;
+    }
+
+    #location {
+        width: 220px;
+    }
+}
+
+/* mobile responsive styling */
+@media screen and (max-width: 480px) {
+    .contact-body {
+        padding: 20px;
+        width: 100vw;
+    }
+    
+    .contact-txt {
+        margin: 40px auto 10px 40px;
+        padding: 30px 15px 0 15px;
+    }      
+
+    .contact-txt > h2 {
+        font-size: 40px;
+    }
+
+    .contact-txt > h3 {
+        font-size: 16px;
+    }
+
+    .contact {
+        display: flex;
+        padding: 13.071px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-left: 0px;
+    }
+
+    .input {
+        display: flex;
+        width: 324px;
+        height: 44px;
+        padding: 4.085px;
+        align-items: center;
+        gap: 4.085px;
+        margin-left: 10px;
+        border-radius: 4px;
+    }
+
+    .contact > form > textarea {
+        height: 97.5px;
+        padding: 4.085px;
+    }
+
+    .location-container {
+        flex-direction: column;
+    }
+
+    #location, #zip {
+        width: 324px;
+        margin: 8px 10px;
+    }
+
+    .btn {
+        width: 216px;
+        height: 32px;
+        border-radius: 4px;
+        margin: auto;
+        font-size: 8px;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .errorMsg {
+        font-size: 10px;
+        max-width: 210px;
+    }
+
+    .btn.loadingAnimation .letter-animation {
+        transform: translateX(calc(100% + 216px));
+    }
+
+    .btn.loadingAnimation .arrow-animation {
+        transform: translateX(calc(100% + 216px));
+      }
+
+    .letter {
+        margin-top: 0px;
+        margin-right: 3.75px;
+        width: 8.5px;
+        height: auto;
+        flex-shrink: 0; 
+    }
+}
+
+

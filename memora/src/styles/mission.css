@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Voga';
+    src: url('/fonts/Voga-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+.mission{
+    width: 100vw;
+    height: 52.0625rem;
+    flex-shrink: 0;
+    background: #26373C;
+    transform: translateY(-1%);
+
+}
+
+.lightContainer{
+    background: transparent;
+    /* border: solid 1px orange; */
+    position:relative;
+    z-index: 1;
+    width:90%;
+    height:80%;
+    top: 50%;
+    left:50%;
+    transform : translate(-50%, -50%)
+}
+
+.light {
+    display: inline-block;
+    width: 33%;
+    height: 50%;
+    animation: fadeOut 1s linear forwards; 
+}
+
+.light:hover {
+    filter: blur(150px);
+    animation-name: resetColor; 
+    animation-duration: 1s;
+    animation-timing-function: linear; 
+    animation-fill-mode: forwards; 
+}
+
+
+@keyframes resetColor {
+    25% {
+        background-color: rgba(185, 168, 11, 0.2);
+        filter: blur(150px);
+    }
+    to {
+        background-color: rgba(218,227,229, 0.2);
+        filter: blur(150px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        background-color: rgba(185, 168, 11, 0.2);
+        filter: blur(150px);
+    }
+    to {
+        background-color: transparent;
+        filter: blur(150px);
+    }
+}
+
+.missionText {
+    display: flex;
+padding: 1rem;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 66vw;
+z-index: 0;
+text-align: center;
+/* border: solid 1px red */
+}
+
+.missionText > h1 {
+    color: #DAE3E5;
+    font-family: 'Voga';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    display: flex;
+padding: 1rem;
+align-items: center;
+gap: 0.5rem;
+}
+
+.missionText > h2 {
+    color: #DAE3E5;
+
+    font-family: 'Abel';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 100% */
+    display: flex;
+padding: 1rem;
+align-items: center;
+gap: 0.5rem;
+}
+
+@media only screen and (max-width : 1100px){
+    .mission{
+        transform: translateY(-2%);
+    }
+
+.missionText{
+    align-items: center;
+    width:80vw;
+    top:50%;
+}
+
+    .missionText > h1{
+margin-bottom: 4rem;
+    }
+
+    .missionText > h2{
+        text-align: center;
+        color: #DAE3E5;
+font-style: normal;
+font-weight: 400;
+line-height: 2.5rem; /* 150% */
+    }
+}
+
+@media only screen and (max-width : 800px){
+
+
+.missionText{
+    top:50%
+}
+
+}
+
+@media only screen and (max-width : 510px){
+
+.mission {
+height:30rem;
+transform: translateY(-5%);
+}
+
+    .missionText > h1{
+margin-bottom: 1rem;
+font-size: 2.5rem;
+    }
+
+    .missionText > h2{
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem; /* 150% */
+    }
+}

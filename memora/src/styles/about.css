@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Abel';
+    src: url('/fonts/Abel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.about{
+    display: flex;
+    padding: 11.8125rem 3.625rem 11.8125rem 3.5625rem;
+    justify-content: center;
+    align-items: center;
+    background: rgba(23, 41, 44, 0.90);
+    position: relative;
+    transform: translateY(-22%);
+    width: 100vw;
+}
+
+.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:90vw
+}
+
+.aboutElement{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.aboutElement > img {
+    margin: 1rem;
+}
+
+.textContainer > h2 {
+    color: #DAE3E5;
+font-family: 'Abel';
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: 2rem; /* 60% */
+margin:1rem;
+}
+
+.smallText {
+    color: #DAE3E5;
+font-family: 'Abel';
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+width:80vw;
+margin: 1rem;
+}
+
+@media only screen and (max-width: 1100px){
+    .about{
+        position: relative;
+        transform: translateY(-30%);
+
+        padding: 5.8125rem 3.625rem 5.8125rem 3.5625rem;
+    }
+
+
+    .textContainer > h2 {
+        color: #DAE3E5;
+    font-family: 'Abel';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 60% */
+    margin:1rem;
+    }
+    
+    .smallText {
+        color: #DAE3E5;
+    font-family: 'Abel';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    width:70vw;
+    margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .about{
+        position: relative;
+        transform: translateY(-20%);
+    }
+
+    .aboutElement{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    }
+
+    .textContainer > h2 {
+        color: #DAE3E5;
+    font-family: 'Abel';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 60% */
+    margin:1rem;
+    }
+    
+    .smallText {
+        color: #DAE3E5;
+    font-family: 'Abel';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    width:60vw;
+    margin: 1rem;
+    }
+}
+
+@media only screen and (max-width : 800px){
+    .about{
+        transform: translateY(0%);
+    }
+}
+
+@media only screen and (max-width : 600px){
+    
+    .textContainer > h2 {
+    font-size: 1.75rem;
+    }
+
+    .aboutElement > img {
+        width : 3rem
+    }
+}
+
+@media only screen and (max-width : 480px){
+    .about{
+        transform: translateY(0%);
+    }
+}
