@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-  
+  <img src = "/Prototype Image.png" className = 'websiteBackground'></img>
 <Header/>
 <Navbar />
 <Experiences/>
